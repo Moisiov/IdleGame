@@ -1,28 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// TODO: Bad implementation of audio manager. Need to redo later to control all audio sources.
 /// </summary>
 public class MusicPlayer : MonoBehaviour
 {
-    public AudioSource AudioSource;
+    public GameObject musicObject;
+    private float MusicVolume = 1f;
+    private AudioSource AudioSource;
 
-    private float musicVolume = 1f;
-    void Start()
+    private void Start()
     {
-        musicVolume = PlayerPrefs.GetFloat("MusicVolume");
-        AudioSource.Play();
+        musicObject = GameObject.FindWithTag("GameMusic");
+        AudioSource = musicObject.GetComponent<AudioSource>();
+
+        MusicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        AudioSource.volume = MusicVolume;
     }
     
-    void Update()
+    private void Update()
     {
-        AudioSource.volume = musicVolume;
+        AudioSource.volume = MusicVolume;
+        PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
     }
 
     public void updateVolume(float volume)
     {
-        musicVolume = volume;
+        MusicVolume = volume;
     }
 }
