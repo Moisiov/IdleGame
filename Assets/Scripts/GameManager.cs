@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         {
             if(_instance == null)
             {
-                Debug.LogError("GameManager is null");
+                UnityEngine.Debug.LogError("GameManager is null");
             }
 
             return _instance;
