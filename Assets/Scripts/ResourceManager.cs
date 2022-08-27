@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Common.Enums;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class ResourceManager : MonoBehaviour
     public void AddAlcohol(int alcohol)
     {
         _alcohol += alcohol;
+        UnityEngine.Debug.Log($"Alcohol: {_alcohol}");
     }
 
     public int GetMoney()
@@ -51,5 +53,26 @@ public class ResourceManager : MonoBehaviour
     public float GetIntoxication()
     {
         return _intoxication;
+    }
+
+    public string GetResourceText(Resource resource)
+    {
+        string resourceText = string.Empty;
+        switch (resource)
+        {
+            case Resource.Alcohol:
+                resourceText = _alcohol.ToString();
+                break;
+            case Resource.Money:
+                resourceText = $"{_money} €";
+                break;
+            case Resource.Intoxication:
+                resourceText = $"{_intoxication:0.00} ‰";
+                break;
+            default:
+                break;
+        }
+
+        return resourceText;
     }
 }

@@ -15,6 +15,5 @@ public class AlcoholFactory : MonoBehaviour
     void ProduceAlcohol()
     {
         ResourceManager.Instance.AddAlcohol(alcoholProduction);
-        UnityEngine.Debug.Log($"{alcoholProduction} alcohol produced");
     }
 }
