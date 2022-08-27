@@ -445,7 +445,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &629828815349519660
 CanvasRenderer:
@@ -497,5 +497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a445f28cb11344244ac9d127e745f32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  factoryName: 
   alcoholProduction: 1
   productionTime: 2
