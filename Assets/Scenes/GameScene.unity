@@ -2031,8 +2031,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1807711851}
     m_Modifications:
-    - target: {fileID: 629828813965163380, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
-      propertyPath: m_text
+    - target: {fileID: 629828815349519663, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
+      propertyPath: factoryName
       value: "Kiljup\xF6ntt\xF6"
       objectReference: {fileID: 0}
     - target: {fileID: 629828815349519698, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
@@ -2069,7 +2069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629828815349519698, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 629828815349519698, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
       propertyPath: m_LocalPosition.x

@@ -37,7 +37,6 @@ public class ResourceManager : MonoBehaviour
     public void AddAlcohol(int alcohol)
     {
         _alcohol += alcohol;
-        UnityEngine.Debug.Log($"Alcohol: {_alcohol}");
     }
 
     public int GetMoney()
