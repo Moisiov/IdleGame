@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-namespace Common.Enums
+namespace Game.Common.Enums
 {
     public enum Resource
     {

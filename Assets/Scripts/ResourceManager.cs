@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Common.Enums;
+using Game.Common.Enums;
 
 public class ResourceManager : MonoBehaviour
 {

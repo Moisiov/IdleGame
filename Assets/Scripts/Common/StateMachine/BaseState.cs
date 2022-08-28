@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Common.SM
+namespace Game.Common.SM
 {
     public abstract class BaseState
     {
