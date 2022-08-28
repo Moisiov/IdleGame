@@ -7,7 +7,11 @@ namespace Game.Konsta
 {
     public class PassedOutState : BaseState
     {
-        public PassedOutState(StateMachine stateMachine) : base("PassedOut", stateMachine) { }
+        private KonstaStateMachine _sm;
+        public PassedOutState(KonstaStateMachine stateMachine) : base("PassedOut", stateMachine)
+        {
+            _sm = stateMachine;
+        }
         public override void Enter()
         {
             throw new System.NotImplementedException();

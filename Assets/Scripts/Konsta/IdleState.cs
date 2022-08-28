@@ -7,7 +7,11 @@ namespace Game.Konsta
 {
     public class IdleState : BaseState
     {
-        public IdleState(StateMachine stateMachine) : base("Idle", stateMachine) { }
+        private KonstaStateMachine _sm;
+        public IdleState(KonstaStateMachine stateMachine) : base("Idle", stateMachine)
+        {
+            _sm = stateMachine;
+        }
         public override void Enter()
         {
             throw new System.NotImplementedException();

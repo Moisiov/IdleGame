@@ -7,7 +7,11 @@ namespace Game.Konsta
 {
     public class AdventureState : BaseState
     {
-        public AdventureState(StateMachine stateMachine) : base("Adventure", stateMachine) { }
+        private KonstaStateMachine _sm;
+        public AdventureState(KonstaStateMachine stateMachine) : base("Adventure", stateMachine)
+        {
+            _sm = stateMachine;
+        }
         public override void Enter()
         {
             throw new System.NotImplementedException();

@@ -7,7 +7,11 @@ namespace Game.Konsta
 {
     public class WorkState : BaseState
     {
-        public WorkState(StateMachine stateMachine) : base("Work", stateMachine) { }
+        private KonstaStateMachine _sm;
+        public WorkState(KonstaStateMachine stateMachine) : base("Work", stateMachine)
+        {
+            _sm = stateMachine;
+        }
         public override void Enter()
         {
             throw new System.NotImplementedException();
