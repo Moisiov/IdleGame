@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Common.Enums;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -51,5 +52,10 @@ public class ResourceManager : MonoBehaviour
     public float GetIntoxication()
     {
         return _intoxication;
+    }
+
+    public void AddIntoxication(float intoxication)
+    {
+        _intoxication += intoxication;
     }
 }

@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 795884885}
   - component: {fileID: 795884887}
   - component: {fileID: 795884886}
+  - component: {fileID: 795884888}
   m_Layer: 5
   m_Name: AlcoholText
   m_TagString: Untagged
@@ -720,6 +721,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795884884}
   m_CullTransparentMesh: 1
+--- !u!114 &795884888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795884884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9d9b2cccd447e4aaa6eaf4af896c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Alkoholi: '
+  resource: 0
 --- !u!1 &1089095865
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +746,7 @@ GameObject:
   - component: {fileID: 1089095866}
   - component: {fileID: 1089095868}
   - component: {fileID: 1089095867}
+  - component: {fileID: 1089095869}
   m_Layer: 5
   m_Name: IntoxicationText
   m_TagString: Untagged
@@ -855,6 +871,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089095865}
   m_CullTransparentMesh: 1
+--- !u!114 &1089095869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089095865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9d9b2cccd447e4aaa6eaf4af896c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Humala: '
+  resource: 2
 --- !u!1 &1100962360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1522,7 @@ GameObject:
   - component: {fileID: 1819050344}
   - component: {fileID: 1819050346}
   - component: {fileID: 1819050345}
+  - component: {fileID: 1819050347}
   m_Layer: 5
   m_Name: MoneyText
   m_TagString: Untagged
@@ -1616,6 +1647,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819050343}
   m_CullTransparentMesh: 1
+--- !u!114 &1819050347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819050343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9d9b2cccd447e4aaa6eaf4af896c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Raha: '
+  resource: 1
 --- !u!1 &1820551356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,8 +2031,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1807711851}
     m_Modifications:
-    - target: {fileID: 629828813965163380, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
-      propertyPath: m_text
+    - target: {fileID: 629828815349519663, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
+      propertyPath: factoryName
       value: "Kiljup\xF6ntt\xF6"
       objectReference: {fileID: 0}
     - target: {fileID: 629828815349519698, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
@@ -2024,7 +2069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629828815349519698, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 629828815349519698, guid: 3a331a6364d74e3468859caeb8af7784, type: 3}
       propertyPath: m_LocalPosition.x
