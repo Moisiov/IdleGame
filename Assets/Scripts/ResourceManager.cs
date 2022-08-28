@@ -53,4 +53,9 @@ public class ResourceManager : MonoBehaviour
     {
         return _intoxication;
     }
+
+    public void AddIntoxication(float intoxication)
+    {
+        _intoxication += intoxication;
+    }
 }
