@@ -7,7 +7,6 @@ using TMPro;
 
 public class ResourceText : MonoBehaviour
 {
-    public string text = string.Empty;
     public Resource resource = Resource.Alcohol;
     private TextMeshProUGUI textObject;
 
@@ -20,7 +19,20 @@ public class ResourceText : MonoBehaviour
     {
         if (textObject != null)
         {
-            textObject.text = text + ResourceManager.Instance.GetResourceText(resource);
+            switch (resource)
+            {
+                case Resource.Alcohol:
+                    textObject.text = $"Alkoholi: {ResourceManager.Instance.GetAlcohol()}";
+                    break;
+                case Resource.Money:
+                    textObject.text = $"Raha: {ResourceManager.Instance.GetMoney()} €";
+                    break;
+                case Resource.Intoxication:
+                    textObject.text = $"Humala: {ResourceManager.Instance.GetIntoxication():0.00} ‰";
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

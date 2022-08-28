@@ -53,25 +53,4 @@ public class ResourceManager : MonoBehaviour
     {
         return _intoxication;
     }
-
-    public string GetResourceText(Resource resource)
-    {
-        string resourceText = string.Empty;
-        switch (resource)
-        {
-            case Resource.Alcohol:
-                resourceText = _alcohol.ToString();
-                break;
-            case Resource.Money:
-                resourceText = $"{_money} €";
-                break;
-            case Resource.Intoxication:
-                resourceText = $"{_intoxication:0.00} ‰";
-                break;
-            default:
-                break;
-        }
-
-        return resourceText;
-    }
 }
