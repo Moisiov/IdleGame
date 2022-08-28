@@ -18,7 +18,15 @@ namespace Game.Konsta
         }
         public override void UpdateLogic()
         {
-            throw new System.NotImplementedException();
+            if (ResourceManager.Instance.GetAlcohol() <= 0)
+            {
+                stateMachine.ChangeState(_sm.idle);
+            }
+
+            if (ResourceManager.Instance.GetIntoxication() >= 5.0)
+            {
+                stateMachine.ChangeState(_sm.passedOut);
+            }
         }
         public override void Exit()
         {
