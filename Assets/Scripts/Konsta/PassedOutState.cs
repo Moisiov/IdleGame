@@ -12,17 +12,13 @@ namespace Game.Konsta
         {
             _sm = stateMachine;
         }
-        public override void Enter()
-        {
-            throw new System.NotImplementedException();
-        }
+
         public override void UpdateLogic()
         {
-            throw new System.NotImplementedException();
-        }
-        public override void Exit()
-        {
-            throw new System.NotImplementedException();
+            if (ResourceManager.Instance.GetIntoxication() <= 0)
+            {
+                stateMachine.ChangeState(_sm.idle);
+            }
         }
     }
 }

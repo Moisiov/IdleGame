@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Game.Common.SM
 {
+    /// <summary>
+    /// Generic state machine class. Derive use case specific state machines from this class.
+    /// </summary>
     public class StateMachine : MonoBehaviour
     {
         BaseState currentState;
@@ -21,6 +24,11 @@ namespace Game.Common.SM
                 currentState.UpdateLogic();
         }
 
+        /// <summary>
+        /// Handles state transitions. Triggers current state Exit(),
+        /// sets current state to given state object and calls current state Enter().
+        /// </summary>
+        /// <param name="newState">State to transition in</param>
         public void ChangeState(BaseState newState)
         {
             currentState.Exit();
@@ -32,6 +40,11 @@ namespace Game.Common.SM
         protected virtual BaseState GetInitialState()
         {
             return null;
+        }
+
+        public BaseState GetCurrentState()
+        {
+            return currentState;
         }
     }
 }

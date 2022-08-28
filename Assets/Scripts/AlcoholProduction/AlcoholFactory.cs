@@ -3,31 +3,38 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Game;
 
-public class AlcoholFactory : MonoBehaviour
+namespace Game.AlcoholProduction
 {
-    public string factoryName = string.Empty;
-    public int alcoholProduction = 1;
-    public int productionTime = 1;
-
-    private TextMeshProUGUI nameTextObject;
-    private TextMeshProUGUI productionTextObject;
-    private TextMeshProUGUI productionTimeTextObject;
-
-    void Start()
+    /// <summary>
+    /// Handles alcohol production logic
+    /// </summary>
+    public class AlcoholFactory : MonoBehaviour
     {
-        nameTextObject = gameObject.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
-        nameTextObject.text = factoryName;
-        productionTextObject = gameObject.transform.Find("ProductionText").GetComponent<TextMeshProUGUI>();
-        productionTextObject.text = $"Tuotanto: {alcoholProduction} annosta";
-        productionTimeTextObject = gameObject.transform.Find("ProductionTimeText").GetComponent<TextMeshProUGUI>();
-        productionTimeTextObject.text = $"Nopeus: {productionTime} s";
+        public string factoryName = string.Empty;
+        public int alcoholProduction = 1;
+        public int productionTime = 1;
 
-        InvokeRepeating("ProduceAlcohol", productionTime, productionTime);
-    }
+        private TextMeshProUGUI nameTextObject;
+        private TextMeshProUGUI productionTextObject;
+        private TextMeshProUGUI productionTimeTextObject;
 
-    void ProduceAlcohol()
-    {
-        ResourceManager.Instance.AddAlcohol(alcoholProduction);
+        void Start()
+        {
+            nameTextObject = gameObject.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+            nameTextObject.text = factoryName;
+            productionTextObject = gameObject.transform.Find("ProductionText").GetComponent<TextMeshProUGUI>();
+            productionTextObject.text = $"Tuotanto: {alcoholProduction} annosta";
+            productionTimeTextObject = gameObject.transform.Find("ProductionTimeText").GetComponent<TextMeshProUGUI>();
+            productionTimeTextObject.text = $"Nopeus: {productionTime} s";
+
+            InvokeRepeating("ProduceAlcohol", productionTime, productionTime);
+        }
+
+        void ProduceAlcohol()
+        {
+            ResourceManager.Instance.AddAlcohol(alcoholProduction);
+        }
     }
 }

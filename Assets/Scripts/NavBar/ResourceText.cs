@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Game.Common.Enums;
 using TMPro;
+using Game;
 
 public class ResourceText : MonoBehaviour
 {

@@ -5,6 +5,9 @@ using Game.Common.SM;
 
 namespace Game.Konsta
 {
+    /// <summary>
+    /// Handles Konsta states. States can transition between idle, adventure, passedOut and work.
+    /// </summary>
     public class KonstaStateMachine : StateMachine
     {
         [HideInInspector]

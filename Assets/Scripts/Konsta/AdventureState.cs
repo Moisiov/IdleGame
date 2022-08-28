@@ -12,10 +12,7 @@ namespace Game.Konsta
         {
             _sm = stateMachine;
         }
-        public override void Enter()
-        {
-            throw new System.NotImplementedException();
-        }
+
         public override void UpdateLogic()
         {
             if (ResourceManager.Instance.GetAlcohol() <= 0)
@@ -27,10 +24,6 @@ namespace Game.Konsta
             {
                 stateMachine.ChangeState(_sm.passedOut);
             }
-        }
-        public override void Exit()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

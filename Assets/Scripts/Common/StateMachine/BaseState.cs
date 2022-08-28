@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Common.SM
 {
-    public abstract class BaseState
+    public class BaseState
     {
         public string name;
         protected StateMachine stateMachine;
@@ -15,8 +15,8 @@ namespace Game.Common.SM
             this.stateMachine = stateMachine;
         }
 
-        public abstract void Enter();
-        public abstract void UpdateLogic();
-        public abstract void Exit();
+        public virtual void Enter() { }
+        public virtual void UpdateLogic() { }
+        public virtual void Exit() { }
     }
 }
